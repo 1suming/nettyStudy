@@ -14,7 +14,7 @@ public class TimeServer {
 		
 		MultiplexerTimeServer timeServer=new MultiplexerTimeServer(port);
 		
-		new Thread(timeServer,"NIO MultiplexerTimeServer").start();
+		new Thread(timeServer,"NIO MultiplexerTimeServer").start(); //main线程退出没关系，jvm会把所有的用户线程执行完后退出.
 		
 	}
 		
